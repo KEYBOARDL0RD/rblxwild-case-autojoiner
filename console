@@ -1,6 +1,6 @@
 function lord() {
 let socket = new WebSocket("wss://rblxwild.com/socket.io/?EIO=4&transport=websocket");
-authtoken = "authtoken here"
+authtoken = "No auth token needed anymore :)"
 socket.onopen = function(e) {
 
 };
